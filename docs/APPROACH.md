@@ -537,6 +537,14 @@ const UnifiedResponseSchema = z.union([
 
 ---
 
+## Step 28: Drag & Drop Support
+
+Extended the `data-action` pattern with `draggable="true" data-drag-item="{id}" data-drop-zone` on each draggable item. Four document-level drag event listeners send a generic `"drop"` action with `{draggedId, droppedOnId, dropBefore}` to the LLM, which interprets intent from context. Works for list reordering, Kanban boards, and any other DnD pattern — no JavaScript in generated HTML.
+
+Also hardened `applyPatch` to catch invalid CSS selectors (e.g. Tailwind bracket classes used as selectors) before they crash the session fiber.
+
+---
+
 ## Key Takeaways
 
 1. **Plain HTML over JSX** - AI can steer a responsive frontend by generating plain HTML

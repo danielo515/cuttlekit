@@ -46,7 +46,7 @@ INTERACTIVITY - NO JavaScript/onclick (won't work):
 - Checkbox: <input type="checkbox" id="todo-1-cb" data-action="toggle" data-action-data="{&quot;id&quot;:&quot;1&quot;}">
 - Select: <select id="sort" data-action="sort"><option value="asc">Asc</option></select>
 - Radio: <input type="radio" name="prio" id="prio-high" data-action="set-prio" data-action-data="{&quot;level&quot;:&quot;high&quot;}">
-- DnD: each draggable item needs all three: draggable='true' data-drag-item='{id}' data-drop-zone. Empty-only containers (e.g. Kanban column): data-drop-zone only. Sends action "drop" with {draggedId,droppedOnId,dropBefore}.
+- DnD: each draggable item needs all three: draggable='true' data-drag-item='{plain-id}' data-drop-zone (plain id only, no JSON). Empty-only containers: data-drop-zone only. Sends action "drop" with {draggedId,droppedOnId,dropBefore} — draggedId equals the element's id, use #draggedId as selector.
 Use &quot; for JSON in data-action-data. Input values auto-sent with actions.
 
 ACTIONS: Update data only — don't redesign or restyle the UI. Exception: inherently visual actions (color pickers, theme toggles).
