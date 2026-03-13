@@ -27,7 +27,7 @@ export default defineConfig({
     starlight({
       title: "cuttlekit",
       logo: {
-        src: "../assets/logo-text-2.svg",
+        src: "../assets/logo-text.svg",
         replacesTitle: true,
       },
       social: [
