@@ -50,6 +50,16 @@ export default defineConfig({
           ],
         },
       ],
+      head: [
+        {
+          tag: "script",
+          attrs: {
+            defer: true,
+            "data-domain": "cuttlekit.com",
+            src: "https://plausible.io/js/script.js",
+          },
+        },
+      ],
       customCss: ["./src/styles/global.css"],
       disable404Route: true,
     }),
