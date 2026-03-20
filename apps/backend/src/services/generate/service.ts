@@ -71,7 +71,7 @@ export class GenerateService extends Effect.Service<GenerateService>()(
           // Neither valid - fail with JsonParseError
           return yield* new JsonParseError({
             line,
-            message: `Invalid response format: ${llmResult.error.message}`,
+            message: z.prettifyError(llmResult.error),
           });
         });
 
