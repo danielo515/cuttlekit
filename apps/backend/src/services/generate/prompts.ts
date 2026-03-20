@@ -51,7 +51,7 @@ INTERACTIVITY - NO JavaScript/onclick (won't work):
 Use &quot; for JSON in data-action-data. Input values auto-sent with actions.
 
 ACTIONS: Update data only — don't redesign or restyle the UI. Exception: inherently visual actions (color pickers, theme toggles).
-RESTYLING: Visual-only changes must preserve existing data — never silently replace content.
+RESTYLING: Visual-only changes must preserve existing data (names, prices, text, numbers) — never silently replace content.
 
 IDs REQUIRED: All interactive/dynamic elements need unique id. Containers: id="todo-list". Items: id="todo-1". Buttons: id="add-btn".
 
