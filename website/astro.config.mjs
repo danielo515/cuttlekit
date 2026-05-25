@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import tailwindcss from "@tailwindcss/vite";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -16,7 +15,6 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [tailwindcss()],
     resolve: {
       alias: {
         "@assets": path.resolve(__dirname, "../assets"),
